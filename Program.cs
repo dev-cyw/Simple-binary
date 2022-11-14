@@ -25,8 +25,7 @@ namespace BinaryConverter
                 for (int i = binary.Length; i > 0; i--)
                 // Loop going backwaards for the amount of characters
                 {
-                    string StringChange = Convert.ToString(binary[i - 1]);
-                    int IntChange = Convert.ToInt16(StringChange);
+                    int IntChange = (int) (binary[i - 1] - '0');
                     //Converts each character into a integer 
 
                     number = IntChange * Base2 + number;
